@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+
+        <title>Exploring Primitive and Reference Datatypes</title>
+
+    </head>
+
+    <body>
+
+        <script type="text/javascript">
+
+            // Primitive variables
+            document.write("<h2>PRIMITIVE DATATYPES</h2>");
+
+            var primitiveVar1 = 72;
+            var primitiveVar2 = primitiveVar1;
+
+            document.write("<p>primitiveVar1 has value " + primitiveVar1 + "</p>");
+            document.write("<p>primitiveVar2 has value " + primitiveVar2 + "</p>");
+
+            var primitiveVar2 = 12;
+
+            document.write("<p>primitiveVar1 now has value " + primitiveVar1 + "</p>");
+            document.write("<p>primitiveVar2 now has value " + primitiveVar2 + "</p>");
+
+
+            // Data by reference
+            document.write("<h2>REFERENCE DATATYPES</h2>");
+
+            var referenceVar1 = {};
+            referenceVar1.myValue = 72;
+            var referenceVar2 = referenceVar1;
+
+            document.write("<p>referenceVar1.myValue has value " + referenceVar1.myValue + "</p>");
+            document.write("<p>referenceVar2.myValue has value " + referenceVar2.myValue + "</p>");
+
+            referenceVar2.myValue = 12;
+
+            document.write("<p>referenceVar1.myValue now has value " + referenceVar1.myValue + "</p>");
+            document.write("<p>referenceVar2.myValue now has value " + referenceVar2.myValue + "</p>");
+
+        </script>
+
+    </body>
+
+</html>
