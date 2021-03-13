@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+
+
+<html>
+
+    <header>
+
+        <title>Javascript Objects Demo</title>
+
+    </header>
+
+
+    <body>
+
+        <script type="text/javascript">
+
+            var quizQuestion1 = new Object();
+
+            quizQuestion1.question = "Approximately how far is the Sun from the Earth?";
+            quizQuestion1.answer = "93,000,000 miles";
+            quizQuestion1.wrongAnswer1 = "200 miles";
+            quizQuestion1.wrongAnswer2 = "49,000,000 miles";
+            quizQuestion1.wrongAnswer3 = "150,000 miles";
+
+            var quizQuestion2 = {
+
+                question: "How many planets orbit the Sun?",
+                answer: "8",
+                wrongAnswer1: "6",
+                wrongAnswer2: "7",
+                wrongAnswer3: "9"
+            }
+            
+            var userAnswers = {};
+
+            alert(quizQuestion1.question);
+            alert(quizQuestion2.question);
+
+        </script>
+
+    </body>
+
+
+</html>
