@@ -7,8 +7,7 @@
     <title>A Simple Quiz</title>
 
     <script type="text/javascript" src="js/QuizQuestion.js"></script>
-    <script type="text/javascript" src="js/quizQuestions.js"></script>
-    <script type="text/javascript" src="js/quizFunctions.js"></script>
+    <script type="text/javascript" src="js/SimpleQuiz.js"></script>
 
 </head>
 
@@ -16,8 +15,8 @@
 
     <script type="text/javascript">
 
-        for (var i = 0; i < com.flametreepublishing.questions.length; i++)
-            com.flametreepublishing.renderQuestionAtIndex(i);
+        com.flametreepublishing.simpleQuiz = new com.flametreepublishing.SimpleQuiz();
+        com.flametreepublishing.simpleQuiz.renderAllQuestions();
 
     </script>
 
