@@ -36,6 +36,7 @@ com.flametreepublishing.QuizQuestion.prototype.renderQuestion = function() {
         var answerPara = document.createElement("p");
         answerPara.innerHTML = this.answers[i];
         answerPara.id = "a" + i;
+        answerPara.addEventListener("click", com.flametreepublishing.simpleQuiz.clickHandler, false);
 
         questionDiv.appendChild(answerPara);
     }
