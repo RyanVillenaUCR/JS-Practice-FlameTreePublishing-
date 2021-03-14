@@ -49,3 +49,17 @@ com.flametreepublishing.SimpleQuiz.prototype.renderAllQuestions = function() {
     for (var i = 0; i < this.questions.length; i++)
         this.questions[i].renderQuestion();
 }
+
+com.flametreepublishing.SimpleQuiz.prototype.clickHandler = function(e) {
+
+    var clickedAnswerID = e.target.id;
+    var clickedAnswerIndex = Number(clickedAnswerID.substr(1,1));
+    var clickedQuestionID = e.target.parentNode.id; // parentNode is the div of the p element
+    var clickedQuestionNum = Number(clickedQuestionID.substr(1,1));
+
+    var clickedQuestion = com.flametreepublishing.simpleQuiz.questions[clickedQuestionNum - 1];
+
+    alert(clickedQuestion.checkUserAnswer(clickedAnswerIndex) ?
+        "Correct! Well done." :
+        "No - that's not correct. Try again.");
+}
