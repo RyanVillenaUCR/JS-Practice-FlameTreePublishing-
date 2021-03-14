@@ -56,7 +56,6 @@ com.flametreepublishing.SimpleQuiz.prototype.clickHandler = function(e) {
     var clickedAnswerIndex = Number(clickedAnswerID.substr(1,1));
     var clickedQuestionID = e.target.parentNode.id; // parentNode is the div of the p element
     var clickedQuestionNum = Number(clickedQuestionID.substr(1,1));
-
     var clickedQuestion = com.flametreepublishing.simpleQuiz.questions[clickedQuestionNum - 1];
 
     alert(clickedQuestion.checkUserAnswer(clickedAnswerIndex) ?
