@@ -20,10 +20,25 @@ com.flametreepublishing.QuizQuestion.prototype.checkUserAnswer = function(answer
 
 com.flametreepublishing.QuizQuestion.prototype.renderQuestion = function() {
 
-    document.write("<h2>Question " + this.questionNum + "</h2>");
-    document.write("<p>" + this.questionText + "</p>");
-    document.write("<p>A1: " + this.answers[0] + "</p>");
-    document.write("<p>A2: " + this.answers[1] + "</p>");
-    document.write("<p>A3: " + this.answers[2] + "</p>");
-    document.write("<p>A4: " + this.answers[3] + "</p>");
+    var questionDiv = document.createElement("div");
+    questionDiv.id = "q" + String(this.questionNum);
+
+    var questionHeading = document.createElement("h2");
+    questionHeading.innerHTML = "QUESTION " + this.questionNum;
+    questionDiv.appendChild(questionHeading);
+
+    var questionTextPara = document.createElement("p");
+    questionTextPara.innerHTML = this.questionText;
+    questionDiv.appendChild(questionTextPara);
+
+    for (var i = 0; i < this.answers.length; i++) {
+
+        var answerPara = document.createElement("p");
+        answerPara.innerHTML = this.answers[i];
+        answerPara.id = "a" + i;
+
+        questionDiv.appendChild(answerPara);
+    }
+
+    document.body.appendChild(questionDiv);
 }
